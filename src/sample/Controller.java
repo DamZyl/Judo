@@ -53,7 +53,7 @@ public class Controller implements ActionListener
     }
 
     @Override
-    public void actionPerformed(ActionEvent e) // zrobic ze do kazdego klikniecia myszy nowy event i bedzie dzialalo ;d
+    public void actionPerformed(ActionEvent e)
     {
         if(stateWhiteOsaekomi)
         {
