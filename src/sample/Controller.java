@@ -2,9 +2,13 @@ package sample;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import javafx.application.Platform;
+import javafx.scene.paint.Color;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -40,14 +44,16 @@ public class Controller implements ActionListener
     public void initialize()
     {
         whiteOsaekomi.setText("" + secondOsaekomi);
+        whiteOsaekomi.setTextFill(Color.WHITE);
         whiteIppon.setText("" + whiteScoreIppon);
+        whiteIppon.setTextFill(Color.WHITE);
         whiteWazaari.setText("" + whiteScoreWazaari);
-        whiteShido.setText("" + whiteScoreShido);
         fightTime.setText("" + minuteFight + " : 0" + secondFight);
+        fightTime.setTextFill(Color.RED);
     }
 
     @Override
-    public void actionPerformed(ActionEvent e)
+    public void actionPerformed(ActionEvent e) // zrobic ze do kazdego klikniecia myszy nowy event i bedzie dzialalo ;d
     {
         if(stateWhiteOsaekomi)
         {
@@ -66,10 +72,11 @@ public class Controller implements ActionListener
                         {
                             whiteScoreIppon++;
                             whiteIppon.setText("1");
+                            whiteIppon.setTextFill(Color.BLACK);
                             stateWhiteOsaekomi = false;
                             timer.stop();
                             secondOsaekomi = 0;
-                            whiteOsaekomi.setText("0");
+                            whiteOsaekomi.setTextFill(Color.WHITE);
                         }
                     }
 
@@ -77,10 +84,11 @@ public class Controller implements ActionListener
                     {
                         whiteScoreIppon++;
                         whiteIppon.setText("1");
+                        whiteIppon.setTextFill(Color.BLACK);
                         stateWhiteOsaekomi = false;
                         timer.stop();
                         secondOsaekomi = 0;
-                        whiteOsaekomi.setText("0");
+                        whiteOsaekomi.setTextFill(Color.WHITE);
                     }
                 }
             });
@@ -159,20 +167,21 @@ public class Controller implements ActionListener
         {
             if(whiteScoreShido == 0)
             {
-                whiteShido.setText("1");
+                whiteShido.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("yellowCard.png"))));
                 whiteScoreShido++;
             }
 
             else if(whiteScoreShido == 1)
             {
-                whiteShido.setText("2");
+                whiteShido.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("YellowCards.png"))));
                 whiteScoreShido++;
             }
 
             else if(whiteScoreShido == 2)
             {
-                whiteShido.setText("3");
+                whiteShido.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("redCard.png"))));
                 whiteScoreIppon = 1;
+                whiteIppon.setTextFill(Color.BLACK);
                 whiteIppon.setText("1");
                 whiteScoreShido++;
             }
@@ -182,21 +191,21 @@ public class Controller implements ActionListener
         {
             if(whiteScoreShido == 3)
             {
-                whiteShido.setText("2");
-                whiteIppon.setText("0");
+                whiteShido.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("YellowCards.png"))));
+                whiteIppon.setTextFill(Color.WHITE);
                 whiteScoreIppon = 0;
                 whiteScoreShido--;
             }
 
             else if(whiteScoreShido == 2)
             {
-                whiteShido.setText("1");
+                whiteShido.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("yellowCard.png"))));
                 whiteScoreShido--;
             }
 
             else if(whiteScoreShido == 1)
             {
-                whiteShido.setText("0");
+                whiteShido.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("whiteCard.png"))));
                 whiteScoreShido--;
             }
         }
@@ -216,6 +225,7 @@ public class Controller implements ActionListener
             else if(whiteScoreWazaari == 1 )
             {
                 whiteIppon.setText("1");
+                whiteIppon.setTextFill(Color.BLACK);
                 whiteScoreIppon = 1;
                 whiteScoreWazaari++;
             }
@@ -225,7 +235,7 @@ public class Controller implements ActionListener
         {
             if(whiteScoreWazaari == 2)
             {
-                whiteIppon.setText("0");
+                whiteIppon.setTextFill(Color.WHITE);
                 whiteScoreIppon = 0;
                 whiteScoreWazaari--;
             }
@@ -246,6 +256,7 @@ public class Controller implements ActionListener
             if(whiteScoreIppon == 0)
             {
                 whiteIppon.setText("1");
+                whiteIppon.setTextFill(Color.BLACK);
                 whiteScoreIppon++;
             }
         }
@@ -257,21 +268,21 @@ public class Controller implements ActionListener
                 if(whiteScoreWazaari == 2)
                 {
                     whiteScoreWazaari = 1;
-                    whiteIppon.setText("0");
+                    whiteIppon.setTextFill(Color.WHITE);
                     whiteScoreIppon--;
                 }
 
                 else if(whiteScoreShido == 3)
                 {
                     whiteScoreShido = 2;
-                    whiteIppon.setText("0");
+                    whiteIppon.setTextFill(Color.WHITE);
                     whiteShido.setText("2");
                     whiteScoreIppon--;
                 }
 
                 else
                 {
-                    whiteIppon.setText("0");
+                    whiteIppon.setTextFill(Color.WHITE);
                     whiteScoreIppon--;
                 }
             }
@@ -284,6 +295,7 @@ public class Controller implements ActionListener
         if(event.getButton().equals(MouseButton.PRIMARY))
         {
             stateWhiteOsaekomi = true;
+            whiteOsaekomi.setTextFill(Color.RED);
 
             timer = new Timer(1000, this);
             timer.setInitialDelay(0);
@@ -295,7 +307,7 @@ public class Controller implements ActionListener
             stateWhiteOsaekomi = false;
             timer.stop();
             secondOsaekomi = 0;
-            whiteOsaekomi.setText("0");
+            whiteOsaekomi.setTextFill(Color.WHITE);
         }
     }
 
@@ -305,6 +317,7 @@ public class Controller implements ActionListener
         if(event.getButton().equals(MouseButton.PRIMARY))
         {
             stateFightTime = true;
+            fightTime.setTextFill(Color.GREEN);
 
             timer2 = new Timer(1000, this);
             timer2.setInitialDelay(0);
@@ -315,6 +328,7 @@ public class Controller implements ActionListener
         {
             stateFightTime = false;
             stateGoldenScore = false;
+            fightTime.setTextFill(Color.RED);
 
             timer2.stop();
 
