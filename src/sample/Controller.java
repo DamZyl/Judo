@@ -8,12 +8,11 @@ import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import javafx.application.Platform;
 import javafx.scene.paint.Color;
-
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class Controller implements ActionListener
+public class Controller //implements ActionListener
 {
     private Timer timer;
     private Timer timer2;
@@ -26,9 +25,9 @@ public class Controller implements ActionListener
     private static int whiteScoreWazaari = 0;
     private static int whiteScoreIppon = 0;
     private static int whiteScoreShido = 0;
-    private static int blueScoreWazaari = 0;
+    /*private static int blueScoreWazaari = 0;
     private static int blueScoreIppon = 0;
-    private static int blueScoreShido = 0;
+    private static int blueScoreShido = 0;*/
 
     @FXML private Label whiteOsaekomi;
     @FXML private Label whiteIppon;
@@ -52,7 +51,7 @@ public class Controller implements ActionListener
         fightTime.setTextFill(Color.RED);
     }
 
-    @Override
+    /*@Override
     public void actionPerformed(ActionEvent e)
     {
         if(stateWhiteOsaekomi)
@@ -158,7 +157,7 @@ public class Controller implements ActionListener
 
             System.out.println("Minute = " + minuteFight + " Second = " + secondFight);
         }
-    }
+    }*/
 
     @FXML
     public void mouseClickedWhiteShido(MouseEvent event)
@@ -290,14 +289,58 @@ public class Controller implements ActionListener
     }
 
     @FXML
-    public void mouseClickedWhiteOsaekomi(MouseEvent event) throws InterruptedException
+    public void mouseClickedWhiteOsaekomi(MouseEvent event) throws InterruptedException // cos takiego chyba !!!!
     {
         if(event.getButton().equals(MouseButton.PRIMARY))
         {
             stateWhiteOsaekomi = true;
             whiteOsaekomi.setTextFill(Color.RED);
 
-            timer = new Timer(1000, this);
+            timer = new Timer(1000, e ->
+            {
+                if(stateWhiteOsaekomi)
+                {
+                    Platform.runLater(() ->
+                    {
+                        {
+                            whiteOsaekomi.setText("" + secondOsaekomi);
+                            secondOsaekomi++;
+
+                            if(secondOsaekomi == 11)
+                            {
+                                whiteScoreWazaari++;
+                                whiteWazaari.setText("1");
+
+                                if(whiteScoreWazaari == 2)
+                                {
+                                    whiteScoreIppon++;
+                                    whiteIppon.setText("1");
+                                    whiteIppon.setTextFill(Color.BLACK);
+                                    stateWhiteOsaekomi = false;
+                                    timer.stop();
+                                    secondOsaekomi = 0;
+                                    whiteOsaekomi.setTextFill(Color.WHITE);
+                                }
+                            }
+
+                            if(secondOsaekomi == 21)
+                            {
+                                whiteScoreIppon++;
+                                whiteIppon.setText("1");
+                                whiteIppon.setTextFill(Color.BLACK);
+                                stateWhiteOsaekomi = false;
+                                timer.stop();
+                                secondOsaekomi = 0;
+                                whiteOsaekomi.setTextFill(Color.WHITE);
+                            }
+                        }
+                    });
+
+                    System.out.println("Second = " + secondOsaekomi);
+                }
+            });
+
+
             timer.setInitialDelay(0);
             timer.start();
         }
@@ -319,7 +362,71 @@ public class Controller implements ActionListener
             stateFightTime = true;
             fightTime.setTextFill(Color.GREEN);
 
-            timer2 = new Timer(1000, this);
+            timer2 = new Timer(1000, e ->
+            {
+                if(stateFightTime)
+                {
+                    Platform.runLater(() ->
+                    {
+                        if(secondFight < 10)
+                        {
+                            fightTime.setText("" + minuteFight + " : 0" + secondFight);
+                            secondFight--;
+                        }
+
+                        else
+                        {
+                            fightTime.setText("" + minuteFight + " : " + secondFight);
+                            secondFight--;
+                        }
+
+                        if(minuteFight == 0 && secondFight < 0)
+                        {
+                            stateFightTime = false;
+                            stateGoldenScore = true;
+                            minuteFight = 0;
+                            secondFight = 0;
+                            fightTime.setText("" + minuteFight + " : 0" + secondFight);
+                        }
+
+                        if(secondFight < 0)
+                        {
+                            secondFight = 59;
+                            minuteFight--;
+
+                        }
+                    });
+
+                    System.out.println("Minute = " + minuteFight + " Second = " + secondFight);
+                }
+
+                if(stateGoldenScore)
+                {
+                    Platform.runLater(() ->
+                    {
+                        if(secondFight < 10)
+                        {
+                            fightTime.setText("" + minuteFight + " : 0" + secondFight);
+                            secondFight++;
+                        }
+
+                        else
+                        {
+                            fightTime.setText("" + minuteFight + " : " + secondFight);
+                            secondFight++;
+                        }
+
+                        if(secondFight > 59)
+                        {
+                            secondFight = 0;
+                            minuteFight++;
+                        }
+                    });
+
+                    System.out.println("Minute = " + minuteFight + " Second = " + secondFight);
+                }
+            });
+
             timer2.setInitialDelay(0);
             timer2.start();
         }
