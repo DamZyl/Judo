@@ -1,5 +1,6 @@
 package sample;
 
+import game.JudoGame;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
@@ -30,7 +31,7 @@ public class Controller //implements ActionListener
     private static int blueScoreIppon = 0;
     private static int blueScoreShido = 0;
     */
-
+    private JudoGame judoGame = new JudoGame();
     @FXML private Label whiteOsaekomi;
     @FXML private Label whiteIppon;
     @FXML private Label whiteWazaari;
