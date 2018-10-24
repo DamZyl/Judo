@@ -14,6 +14,7 @@ import java.awt.event.ActionListener;
 
 public class Controller //implements ActionListener
 {
+    /*
     private Timer timer;
     private Timer timer2;
     private static boolean stateWhiteOsaekomi = false;
@@ -25,9 +26,10 @@ public class Controller //implements ActionListener
     private static int whiteScoreWazaari = 0;
     private static int whiteScoreIppon = 0;
     private static int whiteScoreShido = 0;
-    /*private static int blueScoreWazaari = 0;
+    private static int blueScoreWazaari = 0;
     private static int blueScoreIppon = 0;
-    private static int blueScoreShido = 0;*/
+    private static int blueScoreShido = 0;
+    */
 
     @FXML private Label whiteOsaekomi;
     @FXML private Label whiteIppon;
@@ -42,6 +44,7 @@ public class Controller //implements ActionListener
     @FXML
     public void initialize()
     {
+        /*
         whiteOsaekomi.setText("" + secondOsaekomi);
         whiteOsaekomi.setTextFill(Color.WHITE);
         whiteIppon.setText("" + whiteScoreIppon);
@@ -49,9 +52,11 @@ public class Controller //implements ActionListener
         whiteWazaari.setText("" + whiteScoreWazaari);
         fightTime.setText("" + minuteFight + " : 0" + secondFight);
         fightTime.setTextFill(Color.RED);
+        */
     }
 
-    /*@Override
+    /*
+    @Override
     public void actionPerformed(ActionEvent e)
     {
         if(stateWhiteOsaekomi)
@@ -157,13 +162,15 @@ public class Controller //implements ActionListener
 
             System.out.println("Minute = " + minuteFight + " Second = " + secondFight);
         }
-    }*/
+    }
+    */
 
     @FXML
     public void mouseClickedWhiteShido(MouseEvent event)
     {
         if(event.getButton().equals(MouseButton.PRIMARY))
         {
+            /*
             if(whiteScoreShido == 0)
             {
                 whiteShido.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("yellowCard.png"))));
@@ -184,10 +191,12 @@ public class Controller //implements ActionListener
                 whiteIppon.setText("1");
                 whiteScoreShido++;
             }
+            */
         }
 
         else if(event.getButton().equals(MouseButton.SECONDARY))
         {
+            /*
             if(whiteScoreShido == 3)
             {
                 whiteShido.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("YellowCards.png"))));
@@ -207,6 +216,7 @@ public class Controller //implements ActionListener
                 whiteShido.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("whiteCard.png"))));
                 whiteScoreShido--;
             }
+            */
         }
     }
 
@@ -215,6 +225,7 @@ public class Controller //implements ActionListener
     {
         if(event.getButton().equals(MouseButton.PRIMARY))
         {
+            /*
             if(whiteScoreWazaari == 0)
             {
                 whiteWazaari.setText("1");
@@ -228,10 +239,12 @@ public class Controller //implements ActionListener
                 whiteScoreIppon = 1;
                 whiteScoreWazaari++;
             }
+            */
         }
 
         else if(event.getButton().equals(MouseButton.SECONDARY))
         {
+            /*
             if(whiteScoreWazaari == 2)
             {
                 whiteIppon.setTextFill(Color.WHITE);
@@ -244,6 +257,7 @@ public class Controller //implements ActionListener
                 whiteWazaari.setText("0");
                 whiteScoreWazaari--;
             }
+            */
         }
     }
 
@@ -252,16 +266,19 @@ public class Controller //implements ActionListener
     {
         if(event.getButton().equals(MouseButton.PRIMARY))
         {
-            if(whiteScoreIppon == 0)
+           /*
+           if(whiteScoreIppon == 0)
             {
                 whiteIppon.setText("1");
                 whiteIppon.setTextFill(Color.BLACK);
                 whiteScoreIppon++;
             }
+            */
         }
 
         else if(event.getButton().equals(MouseButton.SECONDARY))
         {
+            /*
             if(whiteScoreIppon == 1)
             {
                 if(whiteScoreWazaari == 2)
@@ -285,6 +302,7 @@ public class Controller //implements ActionListener
                     whiteScoreIppon--;
                 }
             }
+            */
         }
     }
 
@@ -293,6 +311,7 @@ public class Controller //implements ActionListener
     {
         if(event.getButton().equals(MouseButton.PRIMARY))
         {
+            /*
             stateWhiteOsaekomi = true;
             whiteOsaekomi.setTextFill(Color.RED);
 
@@ -343,14 +362,17 @@ public class Controller //implements ActionListener
 
             timer.setInitialDelay(0);
             timer.start();
+            */
         }
 
         else if(event.getButton().equals(MouseButton.SECONDARY))
         {
+            /*
             stateWhiteOsaekomi = false;
             timer.stop();
             secondOsaekomi = 0;
             whiteOsaekomi.setTextFill(Color.WHITE);
+            */
         }
     }
 
@@ -359,6 +381,7 @@ public class Controller //implements ActionListener
     {
         if(event.getButton().equals(MouseButton.PRIMARY))
         {
+            /*
             stateFightTime = true;
             fightTime.setTextFill(Color.GREEN);
 
@@ -429,10 +452,12 @@ public class Controller //implements ActionListener
 
             timer2.setInitialDelay(0);
             timer2.start();
+            */
         }
 
         else if(event.getButton().equals(MouseButton.SECONDARY))
         {
+            /*
             stateFightTime = false;
             stateGoldenScore = false;
             fightTime.setTextFill(Color.RED);
@@ -447,7 +472,7 @@ public class Controller //implements ActionListener
             else
             {
                 fightTime.setText("" + minuteFight + " : " + secondFight);
-            }
+            }*/
         }
     }
 }
