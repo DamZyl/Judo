@@ -1,135 +1,103 @@
 package game;
 
+import enity.Player;
 import javafx.application.Platform;
-import player.BluePlayer;
-import player.WhitePlayer;
 import javax.swing.*;
 
 public class JudoGame
 {
     private Timer timerOsaekomi;
     private Timer timerFight;
-    private WhitePlayer whitePlayer;
-    private BluePlayer bluePlayer;
+    private Player whitePlayer;
+    private Player bluePlayer;
     private int secondOsaekomi;
     private int secondFight;
     private int minuteFight;
-    private int whiteScoreShido;
-    private int whiteScoreWazaari;
-    private int whiteScoreIppon;
-    private int blueScoreShido;
-    private int blueScoreWazaari;
-    private int blueScoreIppon;
-    private boolean stateWhiteOsaekomi;
-    private boolean stateBlueOsaekomi;
     private boolean stateFightTime;
     private boolean stateGoldenScore;
 
     public JudoGame()
     {
-        this.whitePlayer = new WhitePlayer();
-        this.bluePlayer = new BluePlayer();
+        this.whitePlayer = new Player();
+        this.bluePlayer = new Player();
         this.secondOsaekomi = 0;
         this.secondFight = 0;
         this.minuteFight = 4;
-        this.whiteScoreShido = whitePlayer.getWhiteScoreShido();
-        this.whiteScoreWazaari = whitePlayer.getWhiteScoreWazaari();
-        this.whiteScoreIppon = whitePlayer.getWhiteScoreIppon();
-        this.blueScoreShido = bluePlayer.getBlueScoreShido();
-        this.blueScoreWazaari = bluePlayer.getBlueScoreWazaari();
-        this.blueScoreIppon = bluePlayer.getBlueScoreIppon();
-        this.stateWhiteOsaekomi = false;
-        this.stateBlueOsaekomi = false;
         this.stateFightTime = false;
         this.stateGoldenScore = false;
     }
 
-    public int getWhiteScoreShido()
-    {
-        return whiteScoreShido;
-    }
-
     public void addWhiteScoreShido()
     {
-        if(whiteScoreShido == 0)
+        if(whitePlayer.getScore().getScoreShido() == 0)
         {
-            whiteScoreShido++;
+            whitePlayer.getScore().setScoreShido(1);
         }
 
-        else if(whiteScoreShido == 1)
+        else if(whitePlayer.getScore().getScoreShido() == 1)
         {
-            whiteScoreShido++;
+            whitePlayer.getScore().setScoreShido(2);
         }
 
-        else if(whiteScoreShido == 2)
+        else if(whitePlayer.getScore().getScoreShido() == 2)
         {
-            whiteScoreIppon = 1;
-            whiteScoreShido++;
+            whitePlayer.getScore().setScoreIppon(1);
+            whitePlayer.getScore().setScoreShido(3);
         }
     }
 
     public void removeWhiteScoreShido()
     {
-        if(whiteScoreShido == 3)
+        if(whitePlayer.getScore().getScoreShido() == 3)
         {
-            whiteScoreIppon = 0;
-            whiteScoreShido--;
+            whitePlayer.getScore().setScoreIppon(0);
+            whitePlayer.getScore().setScoreShido(2);
         }
 
-        else if(whiteScoreShido == 2)
+        else if(whitePlayer.getScore().getScoreShido() == 2)
         {
-            whiteScoreShido--;
+            whitePlayer.getScore().setScoreShido(1);
         }
 
-        else if(whiteScoreShido == 1)
+        else if(whitePlayer.getScore().getScoreShido() == 1)
         {
-            whiteScoreShido--;
+            whitePlayer.getScore().setScoreShido(0);
         }
-    }
-
-    public int getWhiteScoreWazaari()
-    {
-        return whiteScoreWazaari;
     }
 
     public void addWhiteScoreWazaari()
     {
-        if(whiteScoreWazaari == 0)
+        if(whitePlayer.getScore().getScoreWazaari() == 0)
         {
-            whiteScoreWazaari++;
+            whitePlayer.getScore().setScoreWazaari(1);
         }
 
-        else if(whiteScoreWazaari == 1 )
+        else if(whitePlayer.getScore().getScoreWazaari() == 1 )
         {
-            whiteScoreIppon = 1;
-            whiteScoreWazaari++;
+            whitePlayer.getScore().setScoreIppon(1);
+            whitePlayer.getScore().setScoreWazaari(2);
         }
     }
 
     public void removeWhiteScoreWazaari()
     {
-        if(whiteScoreWazaari == 2)
+        if(whitePlayer.getScore().getScoreWazaari() == 2)
         {
-            whiteScoreIppon = 0;
-            whiteScoreWazaari--;
+            whitePlayer.getScore().setScoreIppon(0);
+            whitePlayer.getScore().setScoreWazaari(1);
         }
 
-        else if(whiteScoreWazaari == 1)
+        else if(whitePlayer.getScore().getScoreWazaari() == 1)
         {
-            whiteScoreWazaari--;
+            whitePlayer.getScore().setScoreWazaari(0);
         }
-    }
-
-    public int getWhiteScoreIppon()
-    {
-        return whiteScoreIppon;
     }
 
     public void addWhiteScoreIppon()
     {
-        if(whiteScoreIppon == 0)
+        if(whitePlayer.getScore().getScoreIppon() == 0)
         {
-            whiteScoreIppon++;
+            whitePlayer.getScore().setScoreIppon(1);
         }
     }
 
