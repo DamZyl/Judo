@@ -103,33 +103,28 @@ public class JudoGame
 
     public void removeWhiteScoreIppon()
     {
-        if(whiteScoreIppon == 1)
+        if(whitePlayer.getScore().getScoreIppon() == 1)
         {
-            if(whiteScoreWazaari == 2)
+            if(whitePlayer.getScore().getScoreWazaari() == 2)
             {
-                whiteScoreWazaari = 1;
-                whiteScoreIppon--;
+                whitePlayer.getScore().setScoreWazaari(1);
+                whitePlayer.getScore().setScoreIppon(0);
             }
 
-            else if(whiteScoreShido == 3)
+            else if(whitePlayer.getScore().getScoreShido() == 3)
             {
-                whiteScoreShido = 2;
-                whiteScoreIppon--;
+                whitePlayer.getScore().setScoreShido(2);
+                whitePlayer.getScore().setScoreIppon(0);
             }
 
             else
             {
-                whiteScoreIppon--;
+                whitePlayer.getScore().setScoreIppon(0);
             }
         }
     }
 
-    public int getSecondOsaekomi()
-    {
-        return secondOsaekomi;
-    }
-
-    public void startWhiteOsaekomi()
+    /*public void startWhiteOsaekomi()
     {
         stateWhiteOsaekomi = true;
 
@@ -179,119 +174,106 @@ public class JudoGame
         timerOsaekomi.stop();
         secondOsaekomi = 0;
     }
-
-    public int getBlueScoreShido()
-    {
-        return blueScoreShido;
-    }
+    */
 
     public void addBlueScoreShido()
     {
-        if(blueScoreShido == 0)
+        if(bluePlayer.getScore().getScoreShido() == 0)
         {
-            blueScoreShido++;
+            bluePlayer.getScore().setScoreShido(1);
         }
 
-        else if(blueScoreShido == 1)
+        else if(bluePlayer.getScore().getScoreShido() == 1)
         {
-            blueScoreShido++;
+            bluePlayer.getScore().setScoreShido(2);
         }
 
-        else if(blueScoreShido == 2)
+        else if(bluePlayer.getScore().getScoreShido() == 2)
         {
-            blueScoreIppon = 1;
-            blueScoreShido++;
+            bluePlayer.getScore().setScoreIppon(1);
+            bluePlayer.getScore().setScoreShido(3);
         }
     }
 
     public void removeBlueScoreShido()
     {
-        if(blueScoreShido == 3)
+        if(bluePlayer.getScore().getScoreShido() == 3)
         {
-            blueScoreIppon = 0;
-            blueScoreShido--;
+            bluePlayer.getScore().setScoreIppon(0);
+            bluePlayer.getScore().setScoreShido(2);
         }
 
-        else if(blueScoreShido == 2)
+        else if(bluePlayer.getScore().getScoreShido() == 2)
         {
-            blueScoreShido--;
+            bluePlayer.getScore().setScoreShido(1);
         }
 
-        else if(blueScoreShido == 1)
+        else if(bluePlayer.getScore().getScoreShido() == 1)
         {
-            blueScoreShido--;
+            bluePlayer.getScore().setScoreShido(0);
         }
-    }
-
-    public int getBlueScoreWazaari()
-    {
-        return blueScoreWazaari;
     }
 
     public void addBlueScoreWazaari()
     {
-        if(blueScoreWazaari == 0)
+        if(bluePlayer.getScore().getScoreWazaari() == 0)
         {
-            blueScoreWazaari++;
+            whitePlayer.getScore().setScoreWazaari(1);
         }
 
-        else if(blueScoreWazaari == 1 )
+        else if(bluePlayer.getScore().getScoreWazaari() == 1 )
         {
-            blueScoreIppon = 1;
-            blueScoreWazaari++;
+            bluePlayer.getScore().setScoreIppon(1);
+            bluePlayer.getScore().setScoreWazaari(2);
         }
     }
 
     public void removeBlueScoreWazaari()
     {
-        if(blueScoreWazaari == 2)
+        if(bluePlayer.getScore().getScoreWazaari() == 2)
         {
-            blueScoreIppon = 0;
-            blueScoreWazaari--;
+            bluePlayer.getScore().setScoreIppon(0);
+            bluePlayer.getScore().setScoreWazaari(1);
         }
 
-        else if(blueScoreWazaari == 1)
+        else if(bluePlayer.getScore().getScoreWazaari() == 1)
         {
-            blueScoreWazaari--;
+            bluePlayer.getScore().setScoreWazaari(0);
         }
-    }
-
-    public int getBlueScoreIppon()
-    {
-        return blueScoreIppon;
     }
 
     public void addBlueScoreIppon()
     {
-        if(blueScoreIppon == 0)
+        if(bluePlayer.getScore().getScoreIppon() == 0)
         {
-            blueScoreIppon++;
+            bluePlayer.getScore().setScoreIppon(1);
         }
     }
 
     public void removeBlueScoreIppon()
     {
-        if(blueScoreIppon == 1)
+        if(bluePlayer.getScore().getScoreIppon() == 1)
         {
-            if(blueScoreWazaari == 2)
+            if(bluePlayer.getScore().getScoreWazaari() == 2)
             {
-                blueScoreWazaari = 1;
-                blueScoreIppon--;
+                bluePlayer.getScore().setScoreWazaari(1);
+                bluePlayer.getScore().setScoreIppon(0);
             }
 
-            else if(blueScoreShido == 3)
+            else if(bluePlayer.getScore().getScoreShido() == 3)
             {
-                blueScoreShido = 2;
-                blueScoreIppon--;
+                bluePlayer.getScore().setScoreShido(2);
+                bluePlayer.getScore().setScoreIppon(0);
             }
 
             else
             {
-                blueScoreIppon--;
+                bluePlayer.getScore().setScoreIppon(0);
             }
         }
     }
 
+    /*
     public void startBlueOsaekomi()
     {
         stateBlueOsaekomi = true;
@@ -342,16 +324,7 @@ public class JudoGame
         timerOsaekomi.stop();
         secondOsaekomi = 0;
     }
-
-    public int getSecondFight()
-    {
-        return secondFight;
-    }
-
-    public int getMinuteFight()
-    {
-        return minuteFight;
-    }
+    */
 
     public void startFightTime()
     {
