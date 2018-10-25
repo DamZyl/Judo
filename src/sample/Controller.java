@@ -32,6 +32,7 @@ public class Controller //implements ActionListener
     private static int blueScoreShido = 0;
     */
     private JudoGame judoGame = new JudoGame();
+
     @FXML private Label whiteOsaekomi;
     @FXML private Label whiteIppon;
     @FXML private Label whiteWazaari;
@@ -45,15 +46,38 @@ public class Controller //implements ActionListener
     @FXML
     public void initialize()
     {
-        /*
-        whiteOsaekomi.setText("" + secondOsaekomi);
+        whiteOsaekomi.setText("" + judoGame.getSecondOsaekomi());
         whiteOsaekomi.setTextFill(Color.WHITE);
-        whiteIppon.setText("" + whiteScoreIppon);
+        whiteIppon.setText("" + judoGame.getWhiteScoreIppon());
         whiteIppon.setTextFill(Color.WHITE);
-        whiteWazaari.setText("" + whiteScoreWazaari);
-        fightTime.setText("" + minuteFight + " : 0" + secondFight);
+        whiteWazaari.setText("" + judoGame.getWhiteScoreWazaari());
+        //fightTime.setText("" + minuteFight + " : 0" + secondFight);
         fightTime.setTextFill(Color.RED);
-        */
+    }
+
+    public Label getWhiteOsaekomi()
+    {
+        return whiteOsaekomi;
+    }
+
+    public Label getWhiteIppon()
+    {
+        return whiteIppon;
+    }
+
+    public Label getWhiteWazaari()
+    {
+        return whiteWazaari;
+    }
+
+    public Label getFightTime()
+    {
+        return fightTime;
+    }
+
+    public Label getWhiteShido()
+    {
+        return whiteShido;
     }
 
     /*
@@ -171,53 +195,45 @@ public class Controller //implements ActionListener
     {
         if(event.getButton().equals(MouseButton.PRIMARY))
         {
-            /*
-            if(whiteScoreShido == 0)
+            if(judoGame.getWhiteScoreShido() == 0)
             {
                 whiteShido.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("yellowCard.png"))));
-                whiteScoreShido++;
             }
 
-            else if(whiteScoreShido == 1)
+            else if(judoGame.getWhiteScoreShido() == 1)
             {
                 whiteShido.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("YellowCards.png"))));
-                whiteScoreShido++;
             }
 
-            else if(whiteScoreShido == 2)
+            else if(judoGame.getWhiteScoreShido() == 2)
             {
                 whiteShido.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("redCard.png"))));
-                whiteScoreIppon = 1;
                 whiteIppon.setTextFill(Color.BLACK);
                 whiteIppon.setText("1");
-                whiteScoreShido++;
             }
-            */
+
+            judoGame.addWhiteScoreShido();
         }
 
         else if(event.getButton().equals(MouseButton.SECONDARY))
         {
-            /*
-            if(whiteScoreShido == 3)
+            if(judoGame.getWhiteScoreShido() == 3)
             {
                 whiteShido.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("YellowCards.png"))));
                 whiteIppon.setTextFill(Color.WHITE);
-                whiteScoreIppon = 0;
-                whiteScoreShido--;
             }
 
-            else if(whiteScoreShido == 2)
+            else if(judoGame.getWhiteScoreShido() == 2)
             {
                 whiteShido.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("yellowCard.png"))));
-                whiteScoreShido--;
             }
 
-            else if(whiteScoreShido == 1)
+            else if(judoGame.getWhiteScoreShido() == 1)
             {
                 whiteShido.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("whiteCard.png"))));
-                whiteScoreShido--;
             }
-            */
+
+            judoGame.removeWhiteScoreShido();
         }
     }
 
@@ -226,39 +242,33 @@ public class Controller //implements ActionListener
     {
         if(event.getButton().equals(MouseButton.PRIMARY))
         {
-            /*
-            if(whiteScoreWazaari == 0)
+            if(judoGame.getWhiteScoreWazaari() == 0)
             {
                 whiteWazaari.setText("1");
-                whiteScoreWazaari++;
             }
 
-            else if(whiteScoreWazaari == 1 )
+            else if(judoGame.getWhiteScoreWazaari() == 1 )
             {
                 whiteIppon.setText("1");
                 whiteIppon.setTextFill(Color.BLACK);
-                whiteScoreIppon = 1;
-                whiteScoreWazaari++;
             }
-            */
+
+            judoGame.addWhiteScoreWazaari();
         }
 
         else if(event.getButton().equals(MouseButton.SECONDARY))
         {
-            /*
-            if(whiteScoreWazaari == 2)
+            if(judoGame.getWhiteScoreWazaari() == 2)
             {
                 whiteIppon.setTextFill(Color.WHITE);
-                whiteScoreIppon = 0;
-                whiteScoreWazaari--;
             }
 
-            else if(whiteScoreWazaari == 1)
+            else if(judoGame.getWhiteScoreWazaari() == 1)
             {
                 whiteWazaari.setText("0");
-                whiteScoreWazaari--;
             }
-            */
+
+            judoGame.removeWhiteScoreWazaari();
         }
     }
 
@@ -267,43 +277,37 @@ public class Controller //implements ActionListener
     {
         if(event.getButton().equals(MouseButton.PRIMARY))
         {
-           /*
-           if(whiteScoreIppon == 0)
+            if(judoGame.getWhiteScoreIppon() == 0)
             {
                 whiteIppon.setText("1");
                 whiteIppon.setTextFill(Color.BLACK);
-                whiteScoreIppon++;
             }
-            */
+
+            judoGame.addWhiteScoreIppon();
         }
 
         else if(event.getButton().equals(MouseButton.SECONDARY))
         {
-            /*
-            if(whiteScoreIppon == 1)
+            if(judoGame.getWhiteScoreIppon() == 1)
             {
-                if(whiteScoreWazaari == 2)
+                if(judoGame.getWhiteScoreWazaari() == 2)
                 {
-                    whiteScoreWazaari = 1;
                     whiteIppon.setTextFill(Color.WHITE);
-                    whiteScoreIppon--;
                 }
 
-                else if(whiteScoreShido == 3)
+                else if(judoGame.getWhiteScoreShido() == 3)
                 {
-                    whiteScoreShido = 2;
                     whiteIppon.setTextFill(Color.WHITE);
-                    whiteShido.setText("2");
-                    whiteScoreIppon--;
+                    whiteShido.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("YellowCards.png"))));
                 }
 
                 else
                 {
                     whiteIppon.setTextFill(Color.WHITE);
-                    whiteScoreIppon--;
                 }
             }
-            */
+
+            judoGame.removeWhiteScoreIppon();
         }
     }
 
@@ -364,6 +368,27 @@ public class Controller //implements ActionListener
             timer.setInitialDelay(0);
             timer.start();
             */
+            judoGame.startOsaekomi();
+            whiteOsaekomi.setTextFill(Color.RED);
+            whiteOsaekomi.setText("" + judoGame.getSecondOsaekomi());
+
+            if(judoGame.getSecondOsaekomi() == 11)
+            {
+                whiteWazaari.setText("1");
+
+                if(judoGame.getWhiteScoreWazaari() == 2)
+                {
+                    whiteIppon.setText("1");
+                    whiteIppon.setTextFill(Color.BLACK);
+                    whiteOsaekomi.setTextFill(Color.WHITE);
+                }
+            }
+            if(judoGame.getSecondOsaekomi() == 21)
+            {
+                whiteIppon.setText("1");
+                whiteIppon.setTextFill(Color.BLACK);
+                whiteOsaekomi.setTextFill(Color.WHITE);
+            }
         }
 
         else if(event.getButton().equals(MouseButton.SECONDARY))
@@ -374,6 +399,8 @@ public class Controller //implements ActionListener
             secondOsaekomi = 0;
             whiteOsaekomi.setTextFill(Color.WHITE);
             */
+            whiteOsaekomi.setTextFill(Color.WHITE);
+            judoGame.stopOsaekomi();
         }
     }
 
