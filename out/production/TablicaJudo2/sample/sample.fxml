@@ -131,21 +131,21 @@
                                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                 </rowConstraints>
                                  <children>
-                                    <Label fx:id="blueShido" alignment="CENTER" prefHeight="212.0" prefWidth="237.0" text="0" textFill="WHITE" GridPane.columnIndex="3">
+                                    <Label fx:id="blueShido" alignment="CENTER" onMouseClicked="#mouseClickedBlueShido" prefHeight="212.0" prefWidth="237.0" textFill="WHITE" GridPane.columnIndex="3">
                                        <font>
                                           <Font name="System Bold" size="96.0" />
                                        </font>
                                        <GridPane.margin>
                                           <Insets left="10.0" />
                                        </GridPane.margin></Label>
-                                    <Label fx:id="blueWazaari" alignment="CENTER" prefHeight="177.0" prefWidth="183.0" text="0" textFill="WHITE" GridPane.columnIndex="2">
+                                    <Label fx:id="blueWazaari" alignment="CENTER" onMouseClicked="#mouseClickedBlueWazaari" prefHeight="177.0" prefWidth="183.0" text="0" textFill="WHITE" GridPane.columnIndex="2">
                                        <font>
                                           <Font name="System Bold" size="96.0" />
                                        </font>
                                        <GridPane.margin>
                                           <Insets />
                                        </GridPane.margin></Label>
-                                    <Label fx:id="blueIppon" alignment="CENTER" prefHeight="256.0" prefWidth="318.0" text="0" textFill="WHITE" GridPane.columnIndex="1">
+                                    <Label fx:id="blueIppon" alignment="CENTER" onMouseClicked="#mouseClickedBlueIppon" prefHeight="256.0" prefWidth="318.0" text="0" textFill="WHITE" GridPane.columnIndex="1">
                                        <font>
                                           <Font name="System Bold" size="96.0" />
                                        </font>
@@ -155,7 +155,7 @@
                                        <padding>
                                           <Insets right="60.0" />
                                        </padding></Label>
-                                    <Label fx:id="blueOsaekomi" alignment="CENTER" prefHeight="173.0" prefWidth="246.0" text="0" textFill="WHITE">
+                                    <Label fx:id="blueOsaekomi" alignment="CENTER" onMouseClicked="#mouseClickedBlueOsaekomi" prefHeight="173.0" prefWidth="246.0" text="0" textFill="WHITE">
                                        <font>
                                           <Font name="System Bold" size="50.0" />
                                        </font>

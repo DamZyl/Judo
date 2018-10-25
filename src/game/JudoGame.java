@@ -17,6 +17,9 @@ public class JudoGame
     private int whiteScoreShido;
     private int whiteScoreWazaari;
     private int whiteScoreIppon;
+    private int blueScoreShido;
+    private int blueScoreWazaari;
+    private int blueScoreIppon;
     private boolean stateWhiteOsaekomi;
     private boolean stateBlueOsaekomi;
     private boolean stateFightTime;
@@ -32,6 +35,9 @@ public class JudoGame
         this.whiteScoreShido = whitePlayer.getWhiteScoreShido();
         this.whiteScoreWazaari = whitePlayer.getWhiteScoreWazaari();
         this.whiteScoreIppon = whitePlayer.getWhiteScoreIppon();
+        this.blueScoreShido = bluePlayer.getBlueScoreShido();
+        this.blueScoreWazaari = bluePlayer.getBlueScoreWazaari();
+        this.blueScoreIppon = bluePlayer.getBlueScoreIppon();
         this.stateWhiteOsaekomi = false;
         this.stateBlueOsaekomi = false;
         this.stateFightTime = false;
@@ -155,7 +161,7 @@ public class JudoGame
         return secondOsaekomi;
     }
 
-    public void startOsaekomi()
+    public void startWhiteOsaekomi()
     {
         stateWhiteOsaekomi = true;
 
@@ -195,14 +201,176 @@ public class JudoGame
             }
         });
 
+        timerOsaekomi.setInitialDelay(0);
+        timerOsaekomi.start();
+    }
+
+    public void stopWhiteOsaekomi()
+    {
+        stateWhiteOsaekomi = false;
+        timerOsaekomi.stop();
+        secondOsaekomi = 0;
+    }
+
+    public int getBlueScoreShido()
+    {
+        return blueScoreShido;
+    }
+
+    public void addBlueScoreShido()
+    {
+        if(blueScoreShido == 0)
+        {
+            blueScoreShido++;
+        }
+
+        else if(blueScoreShido == 1)
+        {
+            blueScoreShido++;
+        }
+
+        else if(blueScoreShido == 2)
+        {
+            blueScoreIppon = 1;
+            blueScoreShido++;
+        }
+    }
+
+    public void removeBlueScoreShido()
+    {
+        if(blueScoreShido == 3)
+        {
+            blueScoreIppon = 0;
+            blueScoreShido--;
+        }
+
+        else if(blueScoreShido == 2)
+        {
+            blueScoreShido--;
+        }
+
+        else if(blueScoreShido == 1)
+        {
+            blueScoreShido--;
+        }
+    }
+
+    public int getBlueScoreWazaari()
+    {
+        return blueScoreWazaari;
+    }
+
+    public void addBlueScoreWazaari()
+    {
+        if(blueScoreWazaari == 0)
+        {
+            blueScoreWazaari++;
+        }
+
+        else if(blueScoreWazaari == 1 )
+        {
+            blueScoreIppon = 1;
+            blueScoreWazaari++;
+        }
+    }
+
+    public void removeBlueScoreWazaari()
+    {
+        if(blueScoreWazaari == 2)
+        {
+            blueScoreIppon = 0;
+            blueScoreWazaari--;
+        }
+
+        else if(blueScoreWazaari == 1)
+        {
+            blueScoreWazaari--;
+        }
+    }
+
+    public int getBlueScoreIppon()
+    {
+        return blueScoreIppon;
+    }
+
+    public void addBlueScoreIppon()
+    {
+        if(blueScoreIppon == 0)
+        {
+            blueScoreIppon++;
+        }
+    }
+
+    public void removeBlueScoreIppon()
+    {
+        if(blueScoreIppon == 1)
+        {
+            if(blueScoreWazaari == 2)
+            {
+                blueScoreWazaari = 1;
+                blueScoreIppon--;
+            }
+
+            else if(blueScoreShido == 3)
+            {
+                blueScoreShido = 2;
+                blueScoreIppon--;
+            }
+
+            else
+            {
+                blueScoreIppon--;
+            }
+        }
+    }
+
+    public void startBlueOsaekomi()
+    {
+        stateBlueOsaekomi = true;
+
+        timerOsaekomi = new Timer(1000, e ->
+        {
+            if(stateBlueOsaekomi)
+            {
+                Platform.runLater(() ->
+                {
+                    {
+                        secondOsaekomi++;
+
+                        if(secondOsaekomi == 11)
+                        {
+                            blueScoreWazaari++;
+
+                            if(blueScoreWazaari == 2)
+                            {
+                                blueScoreIppon++;
+                                stateBlueOsaekomi = false;
+                                timerOsaekomi.stop();
+                                secondOsaekomi = 0;
+                            }
+                        }
+
+                        if(secondOsaekomi == 21)
+                        {
+                            blueScoreIppon++;
+                            stateBlueOsaekomi = false;
+                            timerOsaekomi.stop();
+                            secondOsaekomi = 0;
+                        }
+                    }
+                });
+
+                System.out.println("Second = " + this.getSecondOsaekomi());
+            }
+        });
 
         timerOsaekomi.setInitialDelay(0);
         timerOsaekomi.start();
     }
 
-    public void stopOsaekomi()
+    public void stopBlueOsaekomi()
     {
-        stateWhiteOsaekomi = false;
+        stateBlueOsaekomi = false;
         timerOsaekomi.stop();
         secondOsaekomi = 0;
     }
@@ -215,5 +383,81 @@ public class JudoGame
     public int getMinuteFight()
     {
         return minuteFight;
+    }
+
+    public void startFightTime()
+    {
+        stateFightTime = true;
+
+        timerFight = new Timer(1000, e ->
+        {
+            if(stateFightTime)
+            {
+                Platform.runLater(() ->
+                {
+                    if(secondFight < 10)
+                    {
+                        secondFight--;
+                    }
+
+                    else
+                    {
+                        secondFight--;
+                    }
+
+                    if(minuteFight == 0 && secondFight < 0)
+                    {
+                        stateFightTime = false;
+                        stateGoldenScore = true;
+                        minuteFight = 0;
+                        secondFight = 0;
+                    }
+
+                    if(secondFight < 0)
+                    {
+                        secondFight = 59;
+                        minuteFight--;
+
+                    }
+                });
+
+                System.out.println("Minute = " + minuteFight + " Second = " + secondFight);
+            }
+
+            if(stateGoldenScore)
+            {
+                Platform.runLater(() ->
+                {
+                    if(secondFight < 10)
+                    {
+                        secondFight++;
+                    }
+
+                    else
+                    {
+                        secondFight++;
+                    }
+
+                    if(secondFight > 59)
+                    {
+                        secondFight = 0;
+                        minuteFight++;
+                    }
+                });
+
+                System.out.println("Minute = " + minuteFight + " Second = " + secondFight);
+            }
+        });
+
+        timerFight.setInitialDelay(0);
+        timerFight.start();
+    }
+
+    public void stopFightTime()
+    {
+        stateFightTime = false;
+        stateGoldenScore = false;
+
+        timerFight.stop();
     }
 }
