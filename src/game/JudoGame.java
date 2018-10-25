@@ -6,8 +6,6 @@ import javax.swing.*;
 
 public class JudoGame
 {
-    private Timer timerOsaekomi;
-    private Timer timerFight;
     private Player whitePlayer;
     private Player bluePlayer;
     private int secondOsaekomi;
@@ -124,57 +122,38 @@ public class JudoGame
         }
     }
 
-    /*public void startWhiteOsaekomi()
+    public void startWhiteOsaekomi()
     {
-        stateWhiteOsaekomi = true;
-
-        timerOsaekomi = new Timer(1000, e ->
+        Platform.runLater(() ->
         {
-            if(stateWhiteOsaekomi)
             {
-                Platform.runLater(() ->
+                secondOsaekomi++;
+
+                if(secondOsaekomi == 11)
                 {
+                    whitePlayer.getScore().setScoreWazaari(1);
+
+                    if(whitePlayer.getScore().getScoreWazaari() == 2)
                     {
-                        secondOsaekomi++;
-
-                        if(secondOsaekomi == 11)
-                        {
-                            whiteScoreWazaari++;
-
-                            if(whiteScoreWazaari == 2)
-                            {
-                                whiteScoreIppon++;
-                                stateWhiteOsaekomi = false;
-                                timerOsaekomi.stop();
-                                secondOsaekomi = 0;
-                            }
-                        }
-
-                        if(secondOsaekomi == 21)
-                        {
-                            whiteScoreIppon++;
-                            stateWhiteOsaekomi = false;
-                            timerOsaekomi.stop();
-                            secondOsaekomi = 0;
-                        }
+                        whitePlayer.getScore().setScoreIppon(1);
+                        secondOsaekomi = 0;
                     }
-                });
+                }
+                if(secondOsaekomi == 21)
+                {
+                    whitePlayer.getScore().setScoreIppon(1);
+                    secondOsaekomi = 0;
 
-                System.out.println("Second = " + this.getSecondOsaekomi());
+                }
             }
         });
-
-        timerOsaekomi.setInitialDelay(0);
-        timerOsaekomi.start();
     }
 
     public void stopWhiteOsaekomi()
     {
-        stateWhiteOsaekomi = false;
-        timerOsaekomi.stop();
         secondOsaekomi = 0;
     }
-    */
+
 
     public void addBlueScoreShido()
     {
@@ -326,6 +305,7 @@ public class JudoGame
     }
     */
 
+    /*
     public void startFightTime()
     {
         stateFightTime = true;
@@ -400,5 +380,41 @@ public class JudoGame
         stateGoldenScore = false;
 
         timerFight.stop();
+    }
+    */
+
+    public void startGoldenScore()
+    {
+
+    }
+
+    public void stopGoldenScore()
+    {
+
+    }
+
+    public Player getWhitePlayer()
+    {
+        return whitePlayer;
+    }
+
+    public Player getBluePlayer()
+    {
+        return bluePlayer;
+    }
+
+    public int getMinuteFight()
+    {
+        return minuteFight;
+    }
+
+    public int getSecondFight()
+    {
+        return secondFight;
+    }
+
+    public int getSecondOsaekomi()
+    {
+        return secondOsaekomi;
     }
 }

@@ -20,4 +20,9 @@ public class Player
     {
         return stateOsaekomi;
     }
+
+    public void setStateOsaekomi(boolean stateOsaekomi)
+    {
+        this.stateOsaekomi = stateOsaekomi;
+    }
 }
