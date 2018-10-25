@@ -177,17 +177,17 @@ public class Controller //implements ActionListener
         {
             if(judoGame.getWhiteScoreShido() == 0)
             {
-                whiteShido.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("yellowCard.png"))));
+                whiteShido.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("image/yellowCard.png"))));
             }
 
             else if(judoGame.getWhiteScoreShido() == 1)
             {
-                whiteShido.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("YellowCards.png"))));
+                whiteShido.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("image/YellowCards.png"))));
             }
 
             else if(judoGame.getWhiteScoreShido() == 2)
             {
-                whiteShido.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("redCard.png"))));
+                whiteShido.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("image/redCard.png"))));
                 whiteIppon.setTextFill(Color.BLACK);
                 whiteIppon.setText("1");
             }
@@ -199,18 +199,18 @@ public class Controller //implements ActionListener
         {
             if(judoGame.getWhiteScoreShido() == 3)
             {
-                whiteShido.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("YellowCards.png"))));
+                whiteShido.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("image/YellowCards.png"))));
                 whiteIppon.setTextFill(Color.WHITE);
             }
 
             else if(judoGame.getWhiteScoreShido() == 2)
             {
-                whiteShido.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("yellowCard.png"))));
+                whiteShido.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("image/yellowCard.png"))));
             }
 
             else if(judoGame.getWhiteScoreShido() == 1)
             {
-                whiteShido.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("whiteCard.png"))));
+                whiteShido.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("image/whiteCard.png"))));
             }
 
             judoGame.removeWhiteScoreShido();
@@ -278,7 +278,7 @@ public class Controller //implements ActionListener
                 else if(judoGame.getWhiteScoreShido() == 3)
                 {
                     whiteIppon.setTextFill(Color.WHITE);
-                    whiteShido.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("YellowCards.png"))));
+                    whiteShido.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("image/YellowCards.png"))));
                 }
 
                 else
@@ -396,17 +396,17 @@ public class Controller //implements ActionListener
         {
             if(judoGame.getBlueScoreShido() == 0)
             {
-                blueShido.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("yellowCard.png"))));
+                blueShido.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("image/yellowCard.png"))));
             }
 
             else if(judoGame.getBlueScoreShido() == 1)
             {
-                blueShido.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("YellowCards2.png"))));
+                blueShido.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("image/YellowCards2.png"))));
             }
 
             else if(judoGame.getBlueScoreShido() == 2)
             {
-                blueShido.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("redCard.png"))));
+                blueShido.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("image/redCard.png"))));
                 blueIppon.setTextFill(Color.WHITE);
                 blueIppon.setText("1");
             }
@@ -418,18 +418,18 @@ public class Controller //implements ActionListener
         {
             if(judoGame.getBlueScoreShido() == 3)
             {
-                blueShido.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("YellowCards2.png"))));
+                blueShido.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("image/YellowCards2.png"))));
                 blueIppon.setTextFill(Color.BLUE);
             }
 
             else if(judoGame.getBlueScoreShido() == 2)
             {
-                blueShido.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("yellowCard.png"))));
+                blueShido.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("image/yellowCard.png"))));
             }
 
             else if(judoGame.getBlueScoreShido() == 1)
             {
-                blueShido.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("blueCard.png"))));
+                blueShido.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("image/blueCard.png"))));
             }
 
             judoGame.removeBlueScoreShido();
@@ -497,7 +497,7 @@ public class Controller //implements ActionListener
                 else if(judoGame.getBlueScoreShido() == 3)
                 {
                     blueIppon.setTextFill(Color.BLUE);
-                    blueShido.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("YellowCards2.png"))));
+                    blueShido.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("image/YellowCards2.png"))));
                 }
 
                 else
