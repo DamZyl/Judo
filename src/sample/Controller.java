@@ -166,7 +166,7 @@ public class Controller
     }
 
     @FXML
-    public void mouseClickedWhiteOsaekomi(MouseEvent event) throws InterruptedException // zrobic funkcje do inkrementacji sekund i wazari i bd dzialac !!!
+    public void mouseClickedWhiteOsaekomi(MouseEvent event) throws InterruptedException // sprobowac z f-kcja dodawania z JudoGame
     {
         if(event.getButton().equals(MouseButton.PRIMARY))
         {
@@ -185,12 +185,17 @@ public class Controller
 
                             if (judoGame.getSecondOsaekomi() == 11)
                             {
-                                judoGame.getWhitePlayer().getScore().setScoreWazaari(1);
-                                whiteWazaari.setText("1");
-
-                                if (judoGame.getWhitePlayer().getScore().getScoreWazaari() == 2)
+                                if(judoGame.getWhitePlayer().getScore().getScoreWazaari() == 0)
                                 {
-                                    judoGame.getWhitePlayer().getScore().setScoreIppon(1);
+                                    judoGame.addWhiteScoreWazaari();
+                                    whiteWazaari.setText("1");
+                                }
+
+                                //else if(judoGame.getWhitePlayer().getScore().getScoreWazaari() == 1)
+                                else
+                                {
+                                    judoGame.addWhiteScoreWazaari();
+                                    judoGame.addWhiteScoreIppon();
                                     whiteIppon.setText("1");
                                     whiteIppon.setTextFill(Color.BLACK);
                                     judoGame.getWhitePlayer().setStateOsaekomi(false);
@@ -201,9 +206,9 @@ public class Controller
                                 }
                             }
 
-                            if (judoGame.getSecondOsaekomi() > 21)
+                            if (judoGame.getSecondOsaekomi() > 20)
                             {
-                                judoGame.getWhitePlayer().getScore().setScoreIppon(1);
+                                judoGame.addWhiteScoreIppon();
                                 whiteIppon.setText("1");
                                 whiteIppon.setTextFill(Color.BLACK);
                                 judoGame.getWhitePlayer().setStateOsaekomi(false);
@@ -277,7 +282,6 @@ public class Controller
 
             judoGame.removeBlueScoreShido();
         }
-
     }
 
     @FXML
@@ -355,94 +359,79 @@ public class Controller
     }
 
     @FXML
-    public void mouseClickedBlueOsaekomi(MouseEvent event) throws InterruptedException // zepsute wyswietlanie !!!
+    public void mouseClickedBlueOsaekomi(MouseEvent event) throws InterruptedException
     {
         if(event.getButton().equals(MouseButton.PRIMARY))
         {
-            /*
-            stateWhiteOsaekomi = true;
-            whiteOsaekomi.setTextFill(Color.RED);
-            timer = new Timer(1000, e ->
+            judoGame.getBluePlayer().setStateOsaekomi(true);
+            blueOsaekomi.setTextFill(Color.RED);
+
+            timerOsaekomi = new Timer(1000, e ->
             {
-                if(stateWhiteOsaekomi)
+                if(judoGame.getBluePlayer().isStateOsaekomi())
                 {
                     Platform.runLater(() ->
                     {
                         {
-                            whiteOsaekomi.setText("" + secondOsaekomi);
-                            secondOsaekomi++;
-                            if(secondOsaekomi == 11)
+                            blueOsaekomi.setText("" + judoGame.getSecondOsaekomi());
+                            judoGame.incrementSecondOsaekomi();
+
+                            if (judoGame.getSecondOsaekomi() == 11)
                             {
-                                whiteScoreWazaari++;
-                                whiteWazaari.setText("1");
-                                if(whiteScoreWazaari == 2)
+                                if(judoGame.getBluePlayer().getScore().getScoreWazaari() == 0)
                                 {
-                                    whiteScoreIppon++;
-                                    whiteIppon.setText("1");
-                                    whiteIppon.setTextFill(Color.BLACK);
-                                    stateWhiteOsaekomi = false;
-                                    timer.stop();
-                                    secondOsaekomi = 0;
-                                    whiteOsaekomi.setTextFill(Color.WHITE);
+                                    judoGame.addBlueScoreWazaari();
+                                    blueWazaari.setText("1");
+                                }
+
+                                //else if(judoGame.getWhitePlayer().getScore().getScoreWazaari() == 1)
+                                else
+                                {
+                                    judoGame.addBlueScoreIppon();
+                                    judoGame.addBlueScoreIppon();
+                                    blueIppon.setText("1");
+                                    blueIppon.setTextFill(Color.WHITE);
+                                    judoGame.getBluePlayer().setStateOsaekomi(false);
+                                    timerOsaekomi.stop();
+                                    judoGame.setSecondOsaekomi(0);
+                                    blueOsaekomi.setText("0");
+                                    blueOsaekomi.setTextFill(Color.BLUE);
                                 }
                             }
-                            if(secondOsaekomi == 21)
+
+                            if (judoGame.getSecondOsaekomi() > 20)
                             {
-                                whiteScoreIppon++;
-                                whiteIppon.setText("1");
-                                whiteIppon.setTextFill(Color.BLACK);
-                                stateWhiteOsaekomi = false;
-                                timer.stop();
-                                secondOsaekomi = 0;
-                                whiteOsaekomi.setTextFill(Color.WHITE);
+                                judoGame.addBlueScoreIppon();
+                                blueIppon.setText("1");
+                                blueIppon.setTextFill(Color.WHITE);
+                                judoGame.getBluePlayer().setStateOsaekomi(false);
+                                timerOsaekomi.stop();
+                                judoGame.setSecondOsaekomi(0);
+                                blueOsaekomi.setText("0");
+                                blueOsaekomi.setTextFill(Color.BLUE);
                             }
                         }
                     });
-                    System.out.println("Second = " + secondOsaekomi);
+
+                    System.out.println("Second = " + judoGame.getSecondOsaekomi());
                 }
             });
-            timer.setInitialDelay(0);
-            timer.start();
-            judoGame.startBlueOsaekomi();
-            blueOsaekomi.setTextFill(Color.RED);
-            Platform.runLater(() ->
-            {
-                blueOsaekomi.setText("" + judoGame.getSecondOsaekomi());
-                if(judoGame.getSecondOsaekomi() == 11)
-                {
-                    blueWazaari.setText("1");
-                    if(judoGame.getBlueScoreWazaari() == 2)
-                    {
-                        blueOsaekomi.setText("1");
-                        blueIppon.setTextFill(Color.WHITE);
-                        blueOsaekomi.setTextFill(Color.BLUE);
-                    }
-                }
-                if(judoGame.getSecondOsaekomi() == 21)
-                {
-                    blueIppon.setText("1");
-                    blueIppon.setTextFill(Color.WHITE);
-                    blueOsaekomi.setTextFill(Color.BLUE);
-                }
-            });
-            */
+
+            timerOsaekomi.setInitialDelay(0);
+            timerOsaekomi.start();
         }
 
         else if(event.getButton().equals(MouseButton.SECONDARY))
         {
-            /*
-            stateWhiteOsaekomi = false;
-            timer.stop();
-            secondOsaekomi = 0;
-            whiteOsaekomi.setTextFill(Color.WHITE);
+            judoGame.getBluePlayer().setStateOsaekomi(false);
+            timerOsaekomi.stop();
+            judoGame.setSecondOsaekomi(0);
             blueOsaekomi.setTextFill(Color.BLUE);
-            judoGame.stopBlueOsaekomi();
-            */
         }
     }
 
     @FXML
-    public void mouseClickedFightTime(MouseEvent event) throws InterruptedException // zepsute wyswietlanie przy stopie dziala !!!
+    public void mouseClickedFightTime(MouseEvent event) throws InterruptedException
     {
         if(event.getButton().equals(MouseButton.PRIMARY))
         {
@@ -514,36 +503,6 @@ public class Controller
             timerFightTime.setInitialDelay(0);
             timerFightTime.start();
             fightTime.setTextFill(Color.GREEN);
-
-            /*
-            Platform.runLater(() ->
-            {
-                if (judoGame.getSecondFight() < 10)
-                {
-                    fightTime.setText("" + judoGame.getMinuteFight() + " : 0" + judoGame.getSecondFight());
-                }
-                else
-                {
-                    fightTime.setText("" + judoGame.getMinuteFight() + " : " + judoGame.getSecondFight());
-                }
-                if (judoGame.getMinuteFight() == 0 && judoGame.getSecondFight() < 0)
-                {
-                    fightTime.setText("" + judoGame.getMinuteFight() + " : 0" + judoGame.getSecondFight());
-                }
-            });
-
-            Platform.runLater(() ->
-            {
-                if (judoGame.getSecondFight() < 10)
-                {
-                    fightTime.setText("" + judoGame.getMinuteFight() + " : 0" + judoGame.getSecondFight());
-                }
-                else
-                {
-                    fightTime.setText("" + judoGame.getMinuteFight() + " : " + judoGame.getSecondFight());
-                }
-            });
-            */
         }
 
         else if(event.getButton().equals(MouseButton.SECONDARY))
@@ -564,17 +523,6 @@ public class Controller
             }
 
             fightTime.setTextFill(Color.RED);
-
-            /*
-            if(judoGame.getSecondFight() < 10)
-            {
-                fightTime.setText("" + judoGame.getMinuteFight() + " : 0" + judoGame.getSecondFight());
-            }
-            else
-            {
-                fightTime.setText("" + judoGame.getMinuteFight() + " : " + judoGame.getSecondFight());
-            }
-            */
         }
     }
 }

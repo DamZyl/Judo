@@ -2,9 +2,6 @@ package game;
 
 import enity.Player;
 import enity.Score;
-import javafx.application.Platform;
-import javafx.scene.input.MouseButton;
-import javax.swing.Timer;
 
 public class JudoGame
 {
@@ -202,127 +199,6 @@ public class JudoGame
         }
     }
 
-    /*
-    public void startBlueOsaekomi()
-    {
-        stateBlueOsaekomi = true;
-        timerOsaekomi = new Timer(1000, e ->
-        {
-            if(stateBlueOsaekomi)
-            {
-                Platform.runLater(() ->
-                {
-                    {
-                        secondOsaekomi++;
-                        if(secondOsaekomi == 11)
-                        {
-                            blueScoreWazaari++;
-                            if(blueScoreWazaari == 2)
-                            {
-                                blueScoreIppon++;
-                                stateBlueOsaekomi = false;
-                                timerOsaekomi.stop();
-                                secondOsaekomi = 0;
-                            }
-                        }
-                        if(secondOsaekomi == 21)
-                        {
-                            blueScoreIppon++;
-                            stateBlueOsaekomi = false;
-                            timerOsaekomi.stop();
-                            secondOsaekomi = 0;
-                        }
-                    }
-                });
-                System.out.println("Second = " + this.getSecondOsaekomi());
-            }
-        });
-        timerOsaekomi.setInitialDelay(0);
-        timerOsaekomi.start();
-    }
-    public void stopBlueOsaekomi()
-    {
-        stateBlueOsaekomi = false;
-        timerOsaekomi.stop();
-        secondOsaekomi = 0;
-    }
-    */
-
-    /*
-    public void startFightTime()
-    {
-        stateFightTime = true;
-        timerFight = new Timer(1000, e ->
-        {
-            if(stateFightTime)
-            {
-                Platform.runLater(() ->
-                {
-                    if(secondFight < 10)
-                    {
-                        secondFight--;
-                    }
-                    else
-                    {
-                        secondFight--;
-                    }
-                    if(minuteFight == 0 && secondFight < 0)
-                    {
-                        stateFightTime = false;
-                        stateGoldenScore = true;
-                        minuteFight = 0;
-                        secondFight = 0;
-                    }
-                    if(secondFight < 0)
-                    {
-                        secondFight = 59;
-                        minuteFight--;
-                    }
-                });
-                System.out.println("Minute = " + minuteFight + " Second = " + secondFight);
-            }
-            if(stateGoldenScore)
-            {
-                Platform.runLater(() ->
-                {
-                    if(secondFight < 10)
-                    {
-                        secondFight++;
-                    }
-                    else
-                    {
-                        secondFight++;
-                    }
-                    if(secondFight > 59)
-                    {
-                        secondFight = 0;
-                        minuteFight++;
-                    }
-                });
-                System.out.println("Minute = " + minuteFight + " Second = " + secondFight);
-            }
-        });
-        timerFight.setInitialDelay(0);
-        timerFight.start();
-    }
-    public void stopFightTime()
-    {
-        stateFightTime = false;
-        stateGoldenScore = false;
-        timerFight.stop();
-    }
-    */
-
-    public void startGoldenScore()
-    {
-
-    }
-
-    public void stopGoldenScore()
-    {
-
-    }
-
     public Player getWhitePlayer()
     {
         return whitePlayer;
@@ -380,7 +256,7 @@ public class JudoGame
 
     public int incrementSecondOsaekomi()
     {
-        return ++this.secondOsaekomi;
+        return this.secondOsaekomi++;
     }
 
     public void setSecondOsaekomi(int secondOsaekomi)
