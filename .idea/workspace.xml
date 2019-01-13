@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TablicaJudo2/game/JudoGame.class" afterPath="$PROJECT_DIR$/out/production/TablicaJudo2/game/JudoGame.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TablicaJudo2/sample/Controller.class" afterPath="$PROJECT_DIR$/out/production/TablicaJudo2/sample/Controller.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TablicaJudo2/sample/sample.fxml" afterPath="$PROJECT_DIR$/out/production/TablicaJudo2/sample/sample.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/game/JudoGame.java" afterPath="$PROJECT_DIR$/src/game/JudoGame.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/Controller.java" afterPath="$PROJECT_DIR$/src/sample/Controller.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/sample.fxml" afterPath="$PROJECT_DIR$/src/sample/sample.fxml" />
+    </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -63,28 +71,49 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="JudoGame.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/game/JudoGame.java">
+      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2788">
-              <caret line="200" column="0" lean-forward="false" selection-start-line="200" selection-start-column="0" selection-end-line="200" selection-end-column="0" />
+            <state relative-caret-position="969">
+              <caret line="68" column="49" lean-forward="false" selection-start-line="68" selection-start-column="49" selection-end-line="68" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#5685#5686#0" expanded="true" />
-                <element signature="e#5729#5730#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
+      <file leaf-file-name="JudoGame.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/game/JudoGame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8908">
-              <caret line="524" column="45" lean-forward="false" selection-start-line="524" selection-start-column="45" selection-end-line="524" selection-end-column="45" />
+            <state relative-caret-position="270">
+              <caret line="32" column="28" lean-forward="false" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sample.fxml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/sample/sample.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1768">
+              <caret line="104" column="76" lean-forward="false" selection-start-line="104" selection-start-column="76" selection-end-line="104" selection-end-column="76" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -104,6 +133,8 @@
       <find>secondOsae</find>
       <find>startW</find>
       <find>osaekomi</find>
+      <find>shido</find>
+      <find>blueshido</find>
     </findStrings>
   </component>
   <component name="FindManager">
@@ -131,9 +162,9 @@
         <option value="$PROJECT_DIR$/src/enity/Score.java" />
         <option value="$PROJECT_DIR$/src/sample/JudoGame.java" />
         <option value="$PROJECT_DIR$/src/enity/Player.java" />
-        <option value="$PROJECT_DIR$/src/sample/sample.fxml" />
         <option value="$PROJECT_DIR$/src/sample/Controller.java" />
         <option value="$PROJECT_DIR$/src/game/JudoGame.java" />
+        <option value="$PROJECT_DIR$/src/sample/sample.fxml" />
       </list>
     </option>
   </component>
@@ -145,9 +176,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="952" />
-    <option name="width" value="976" />
-    <option name="height" value="1038" />
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1938" />
+    <option name="height" value="1048" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectReloadState">
@@ -168,6 +200,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -184,16 +220,18 @@
               <item name="TablicaJudo2" type="b2602c69:ProjectViewProjectNode" />
               <item name="TablicaJudo2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sample" type="462c0819:PsiDirectoryNode" />
+              <item name="enity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TablicaJudo2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TablicaJudo2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="game" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -209,6 +247,9 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -433,35 +474,51 @@
       <workItem from="1540831549114" duration="41000" />
       <workItem from="1540832277407" duration="78000" />
       <workItem from="1540839343604" duration="516000" />
+      <workItem from="1540839991227" duration="124000" />
+      <workItem from="1540854503881" duration="15000" />
+      <workItem from="1541536571428" duration="46000" />
+      <workItem from="1541582244849" duration="112000" />
+      <workItem from="1545241376894" duration="207000" />
+      <workItem from="1545251822191" duration="2261000" />
+      <workItem from="1545320216537" duration="637000" />
+      <workItem from="1547237885890" duration="411000" />
+      <workItem from="1547238589505" duration="126000" />
+      <workItem from="1547280724997" duration="1911000" />
+      <workItem from="1547375377035" duration="411000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69006000" />
+    <option name="totallyTimeSpent" value="75267000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Tool Output" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Anonymous Apex" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="ANTLR Preview" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30869564" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30652174" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20729166" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="SOQL Query" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Log Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -501,46 +558,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/sample/sample.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1530">
-          <caret line="90" column="28" lean-forward="false" selection-start-line="90" selection-start-column="28" selection-end-line="90" selection-end-column="28" />
-          <folding>
-            <marker date="1540752729521" expanded="true" signature="12757:12802" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3315">
-          <caret line="203" column="32" lean-forward="true" selection-start-line="203" selection-start-column="32" selection-end-line="203" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="32" column="1" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="32" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3264">
-          <caret line="200" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="200" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/MyTimerTask.java" />
     <entry file="file://$PROJECT_DIR$/src/sample/sample.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
@@ -549,9 +566,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1938">
           <caret line="114" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
-          <folding>
-            <marker date="1540752729521" expanded="true" signature="12757:12802" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -570,9 +585,7 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="245" lean-forward="false" selection-start-line="9" selection-start-column="245" selection-end-line="9" selection-end-column="245" />
-          <folding>
-            <marker date="1540752729521" expanded="true" signature="12757:12802" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -600,9 +613,7 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="245" lean-forward="false" selection-start-line="9" selection-start-column="245" selection-end-line="9" selection-end-column="245" />
-          <folding>
-            <marker date="1540752729521" expanded="true" signature="12757:12802" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -630,9 +641,7 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="245" lean-forward="false" selection-start-line="9" selection-start-column="245" selection-end-line="9" selection-end-column="245" />
-          <folding>
-            <marker date="1540752729521" expanded="true" signature="12757:12802" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -660,9 +669,7 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="245" lean-forward="false" selection-start-line="9" selection-start-column="245" selection-end-line="9" selection-end-column="245" />
-          <folding>
-            <marker date="1540752729521" expanded="true" signature="12757:12802" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -690,9 +697,7 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="245" lean-forward="false" selection-start-line="9" selection-start-column="245" selection-end-line="9" selection-end-column="245" />
-          <folding>
-            <marker date="1540752729521" expanded="true" signature="12757:12802" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -730,9 +735,7 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="48" lean-forward="true" selection-start-line="5" selection-start-column="48" selection-end-line="5" selection-end-column="48" />
-          <folding>
-            <marker date="1540752729521" expanded="true" signature="12757:12802" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -760,9 +763,7 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="8" lean-forward="false" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
-          <folding>
-            <marker date="1540752729521" expanded="true" signature="12757:12802" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -790,9 +791,7 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="13" column="8" lean-forward="false" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
-          <folding>
-            <marker date="1540752729521" expanded="true" signature="12757:12802" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -810,9 +809,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="11" lean-forward="true" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
-          <folding>
-            <marker date="1540752729521" expanded="true" signature="12757:12802" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -857,13 +854,6 @@
     <entry file="file://$PROJECT_DIR$/src/sample/MyTimerTask.java" />
     <entry file="file://$PROJECT_DIR$/src/sample/Test.java" />
     <entry file="file://$PROJECT_DIR$/src/sample/Controller2.java" />
-    <entry file="jar://C:/Java/jdk-9.0.1/lib/src.zip!/javafx.graphics/com/sun/glass/ui/win/WinApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="174" column="0" lean-forward="false" selection-start-line="174" selection-start-column="0" selection-end-line="174" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/player/WhitePlayer.java" />
     <entry file="file://$PROJECT_DIR$/src/player/BluePlayer.java" />
     <entry file="jar://C:/Java/jdk-9.0.1/lib/src.zip!/java.base/jdk/internal/reflect/NativeMethodAccessorImpl.java">
@@ -873,61 +863,177 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/sample.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
+    <entry file="jar://C:/Java/jdk-9.0.1/lib/src.zip!/javafx.graphics/com/sun/glass/ui/InvokeLaterDispatcher.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="809">
-          <caret line="118" column="52" lean-forward="false" selection-start-line="118" selection-start-column="52" selection-end-line="118" selection-end-column="52" />
-          <folding>
-            <marker date="1540752729521" expanded="true" signature="12757:12802" ph="..." />
-          </folding>
+        <state relative-caret-position="203">
+          <caret line="95" column="0" lean-forward="false" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Java/jdk-9.0.1/lib/src.zip!/javafx.graphics/com/sun/javafx/application/PlatformImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="448" column="0" lean-forward="false" selection-start-line="448" selection-start-column="0" selection-end-line="448" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Java/jdk-9.0.1/lib/src.zip!/javafx.graphics/com/sun/javafx/application/LauncherImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="918" column="0" lean-forward="false" selection-start-line="918" selection-start-column="0" selection-end-line="918" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Java/jdk-9.0.1/lib/src.zip!/javafx.fxml/javafx/fxml/FXMLLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="3178" column="0" lean-forward="false" selection-start-line="3178" selection-start-column="0" selection-end-line="3178" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Java/jdk-9.0.1/lib/src.zip!/javafx.graphics/com/sun/glass/ui/win/WinApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="174" column="0" lean-forward="false" selection-start-line="174" selection-start-column="0" selection-end-line="174" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+        <state relative-caret-position="170">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/enity/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
+        <state relative-caret-position="357">
           <caret line="23" column="55" lean-forward="true" selection-start-line="23" selection-start-column="55" selection-end-line="23" selection-end-column="55" />
+          <folding>
+            <element signature="e#405#406#0" expanded="true" />
+            <element signature="e#455#456#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/enity/Score.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
+        <state relative-caret-position="525">
           <caret line="40" column="45" lean-forward="true" selection-start-line="40" selection-start-column="45" selection-end-line="40" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/game/JudoGame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2788">
-          <caret line="200" column="0" lean-forward="false" selection-start-line="200" selection-start-column="0" selection-end-line="200" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#5685#5686#0" expanded="true" />
-            <element signature="e#5729#5730#0" expanded="true" />
+            <element signature="e#714#715#0" expanded="true" />
+            <element signature="e#758#759#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8908">
-          <caret line="524" column="45" lean-forward="false" selection-start-line="524" selection-start-column="45" selection-end-line="524" selection-end-column="45" />
+        <state relative-caret-position="969">
+          <caret line="68" column="49" lean-forward="false" selection-start-line="68" selection-start-column="49" selection-end-line="68" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/JudoGame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="32" column="28" lean-forward="false" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/sample.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1768">
+          <caret line="104" column="76" lean-forward="false" selection-start-line="104" selection-start-column="76" selection-end-line="104" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>TablicaJudo2</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>9.0</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>TablicaJudo2</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

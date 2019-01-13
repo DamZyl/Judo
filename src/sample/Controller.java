@@ -2,7 +2,9 @@ package sample;
 
 import game.JudoGame;
 import javafx.application.Platform;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+//import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -10,6 +12,7 @@ import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 import javax.swing.*;
+
 
 public class Controller
 {
@@ -26,6 +29,7 @@ public class Controller
     @FXML private Label blueWazaari;
     @FXML private Label blueShido;
     @FXML private Label fightTime;
+    //@FXML private Button reset;
 
     @FXML
     public void initialize()
@@ -62,8 +66,8 @@ public class Controller
             else if(judoGame.getWhitePlayer().getScore().getScoreShido() == 2)
             {
                 whiteShido.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("image/redCard.png"))));
-                whiteIppon.setTextFill(Color.BLACK);
-                whiteIppon.setText("1");
+                blueIppon.setTextFill(Color.WHITE);
+                blueIppon.setText("1");
             }
 
             judoGame.addWhiteScoreShido();
@@ -74,7 +78,7 @@ public class Controller
             if(judoGame.getWhitePlayer().getScore().getScoreShido() == 3)
             {
                 whiteShido.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("image/YellowCards.png"))));
-                whiteIppon.setTextFill(Color.WHITE);
+                blueIppon.setTextFill(Color.BLUE);
             }
 
             else if(judoGame.getWhitePlayer().getScore().getScoreShido() == 2)
@@ -255,8 +259,8 @@ public class Controller
             else if(judoGame.getBluePlayer().getScore().getScoreShido() == 2)
             {
                 blueShido.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("image/redCard.png"))));
-                blueIppon.setTextFill(Color.WHITE);
-                blueIppon.setText("1");
+                whiteIppon.setTextFill(Color.BLACK);
+                whiteIppon.setText("1");
             }
 
             judoGame.addBlueScoreShido();
@@ -267,7 +271,7 @@ public class Controller
             if(judoGame.getBluePlayer().getScore().getScoreShido() == 3)
             {
                 blueShido.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("image/YellowCards2.png"))));
-                blueIppon.setTextFill(Color.BLUE);
+                whiteIppon.setTextFill(Color.WHITE);
             }
 
             else if(judoGame.getBluePlayer().getScore().getScoreShido() == 2)
@@ -524,5 +528,25 @@ public class Controller
 
             fightTime.setTextFill(Color.RED);
         }
+    }
+
+    @FXML
+    public void resetTable(ActionEvent event)
+    {
+        judoGame.resetTable();
+        whiteOsaekomi.setText("" + judoGame.getSecondOsaekomi());
+        whiteOsaekomi.setTextFill(Color.WHITE);
+        whiteIppon.setText("" + judoGame.getWhitePlayer().getScore().getScoreIppon());
+        whiteIppon.setTextFill(Color.WHITE);
+        whiteWazaari.setText("" + judoGame.getWhitePlayer().getScore().getScoreWazaari());
+        whiteShido.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("image/whiteCard.png"))));
+        blueOsaekomi.setText("" + judoGame.getSecondOsaekomi());
+        blueOsaekomi.setTextFill(Color.BLUE);
+        blueIppon.setText("" + judoGame.getBluePlayer().getScore().getScoreIppon());
+        blueIppon.setTextFill(Color.BLUE);
+        blueWazaari.setText("" + judoGame.getBluePlayer().getScore().getScoreWazaari());
+        blueShido.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("image/blueCard.png"))));
+        fightTime.setText("" + judoGame.getMinuteFight() + " : 0" + judoGame.getSecondFight());
+        fightTime.setTextFill(Color.RED);
     }
 }

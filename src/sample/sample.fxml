@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -32,28 +33,28 @@
                                  <children>
                                     <Label alignment="CENTER" prefHeight="50.0" prefWidth="162.0" text="SHIDO" GridPane.columnIndex="3">
                                        <font>
-                                          <Font name="System Bold Italic" size="24.0" />
+                                          <Font name="System Bold Italic" size="30.0" />
                                        </font>
                                        <GridPane.margin>
                                           <Insets bottom="8.0" left="40.0" right="8.0" top="8.0" />
                                        </GridPane.margin></Label>
                                     <Label alignment="CENTER" prefHeight="41.0" prefWidth="167.0" text="WAZA-ARI" GridPane.columnIndex="2">
                                        <font>
-                                          <Font name="System Bold Italic" size="24.0" />
+                                          <Font name="System Bold Italic" size="30.0" />
                                        </font>
                                        <GridPane.margin>
                                           <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
                                        </GridPane.margin></Label>
                                     <Label alignment="CENTER" prefHeight="84.0" prefWidth="252.0" text="IPPON" GridPane.columnIndex="1">
                                        <font>
-                                          <Font name="System Bold Italic" size="24.0" />
+                                          <Font name="System Bold Italic" size="30.0" />
                                        </font>
                                        <GridPane.margin>
                                           <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
                                        </GridPane.margin></Label>
                                     <Label alignment="CENTER" prefHeight="50.0" prefWidth="165.0" text="OSAEKOMI">
                                        <font>
-                                          <Font name="System Bold Italic" size="24.0" />
+                                          <Font name="System Bold Italic" size="30.0" />
                                        </font>
                                        <GridPane.margin>
                                           <Insets bottom="8.0" left="16.0" top="8.0" />
@@ -77,7 +78,7 @@
                                  <children>
                                     <Label fx:id="whiteShido" alignment="CENTER" onMouseClicked="#mouseClickedWhiteShido" prefHeight="205.0" prefWidth="281.0" GridPane.columnIndex="3">
                                        <font>
-                                          <Font name="System Bold" size="96.0" />
+                                          <Font name="System Bold" size="250.0" />
                                        </font>
                                        <GridPane.margin>
                                           <Insets right="100.0" />
@@ -87,21 +88,21 @@
                                        </padding></Label>
                                     <Label fx:id="whiteWazaari" alignment="CENTER" onMouseClicked="#mouseClickedWhiteWazaari" prefHeight="191.0" prefWidth="187.0" text="0" GridPane.columnIndex="2">
                                        <font>
-                                          <Font name="System Bold" size="96.0" />
+                                          <Font name="System Bold" size="300.0" />
                                        </font>
                                        <GridPane.margin>
                                           <Insets />
                                        </GridPane.margin></Label>
                                     <Label fx:id="whiteIppon" alignment="CENTER" onMouseClicked="#mouseClickedWhiteIppon" prefHeight="229.0" prefWidth="198.0" text="0" GridPane.columnIndex="1">
                                        <font>
-                                          <Font name="System Bold" size="96.0" />
+                                          <Font name="System Bold" size="300.0" />
                                        </font>
                                        <GridPane.margin>
                                           <Insets left="25.0" />
                                        </GridPane.margin></Label>
                                     <Label fx:id="whiteOsaekomi" alignment="CENTER" onMouseClicked="#mouseClickedWhiteOsaekomi" prefHeight="196.0" prefWidth="214.0" text="0">
                                        <font>
-                                          <Font name="System Bold" size="50.0" />
+                                          <Font name="System Bold" size="100.0" />
                                        </font>
                                        <GridPane.margin>
                                           <Insets right="8.0" />
@@ -133,21 +134,21 @@
                                  <children>
                                     <Label fx:id="blueShido" alignment="CENTER" onMouseClicked="#mouseClickedBlueShido" prefHeight="212.0" prefWidth="237.0" textFill="WHITE" GridPane.columnIndex="3">
                                        <font>
-                                          <Font name="System Bold" size="96.0" />
+                                          <Font name="System Bold" size="250.0" />
                                        </font>
                                        <GridPane.margin>
                                           <Insets left="10.0" />
                                        </GridPane.margin></Label>
                                     <Label fx:id="blueWazaari" alignment="CENTER" onMouseClicked="#mouseClickedBlueWazaari" prefHeight="177.0" prefWidth="183.0" text="0" textFill="WHITE" GridPane.columnIndex="2">
                                        <font>
-                                          <Font name="System Bold" size="96.0" />
+                                          <Font name="System Bold" size="300.0" />
                                        </font>
                                        <GridPane.margin>
                                           <Insets />
                                        </GridPane.margin></Label>
                                     <Label fx:id="blueIppon" alignment="CENTER" onMouseClicked="#mouseClickedBlueIppon" prefHeight="256.0" prefWidth="318.0" text="0" textFill="WHITE" GridPane.columnIndex="1">
                                        <font>
-                                          <Font name="System Bold" size="96.0" />
+                                          <Font name="System Bold" size="300.0" />
                                        </font>
                                        <GridPane.margin>
                                           <Insets />
@@ -157,7 +158,7 @@
                                        </padding></Label>
                                     <Label fx:id="blueOsaekomi" alignment="CENTER" onMouseClicked="#mouseClickedBlueOsaekomi" prefHeight="173.0" prefWidth="246.0" text="0" textFill="WHITE">
                                        <font>
-                                          <Font name="System Bold" size="50.0" />
+                                          <Font name="System Bold" size="100.0" />
                                        </font>
                                        <GridPane.margin>
                                           <Insets />
@@ -183,12 +184,13 @@
                                  <children>
                                     <Label fx:id="fightTime" alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#mouseClickedFightTime" prefHeight="70.0" prefWidth="600.0" text="0 : 00" textFill="#00ff6f" GridPane.columnIndex="1">
                                        <font>
-                                          <Font name="System Bold" size="64.0" />
+                                          <Font name="System Bold" size="170.0" />
                                        </font>
                                        <GridPane.margin>
                                           <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
                                        </GridPane.margin>
                                     </Label>
+                                    <Button fx:id="reset" mnemonicParsing="false" onAction="#resetTable" text="Reset" GridPane.columnIndex="2" />
                                  </children>
                               </GridPane>
                            </children>

@@ -19,9 +19,35 @@ public class JudoGame
         this.bluePlayer = new Player();
         this.secondOsaekomi = 0;
         this.secondFight = 0;
-        this.minuteFight = 4;
+        this.minuteFight = 3;
         this.stateFightTime = false;
         this.stateGoldenScore = false;
+    }
+
+    public void resetTable()
+    {
+        this.secondOsaekomi = 0;
+        //System.out.println(this.secondOsaekomi);
+        this.secondFight = 0;
+        //System.out.println(secondFight);
+        this.minuteFight = 3;
+        //System.out.println(minuteFight);
+        this.stateFightTime = false;
+        //System.out.println(stateFightTime);
+        this.stateGoldenScore = false;
+        //System.out.println(stateGoldenScore);
+        whitePlayer.getScore().setScoreWazaari(0);
+        //System.out.println(whitePlayer.getScore().getScoreWazaari());
+        whitePlayer.getScore().setScoreIppon(0);
+        //System.out.println(whitePlayer.getScore().getScoreIppon());
+        whitePlayer.getScore().setScoreShido(0);
+        //System.out.println(whitePlayer.getScore().getScoreShido());
+        bluePlayer.getScore().setScoreWazaari(0);
+        //System.out.println(bluePlayer.getScore().getScoreWazaari());
+        bluePlayer.getScore().setScoreIppon(0);
+        //System.out.println(bluePlayer.getScore().getScoreIppon());
+        bluePlayer.getScore().setScoreShido(0);
+        //System.out.println(bluePlayer.getScore().getScoreShido());
     }
 
     public void addBlueScoreShido()
